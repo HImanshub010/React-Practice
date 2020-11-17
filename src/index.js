@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import Setup from './tutorial/3-conditional-rendering/setup/3-show-hide'
+import Setup from './tutorial/4-forms/setup/2-multiple-inputs'
 
 ReactDOM.render(
   <React.StrictMode>
