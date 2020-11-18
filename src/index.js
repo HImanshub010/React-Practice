@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import Setup from './tutorial/4-forms/setup/2-multiple-inputs'
+import Setup from './tutorial/6-useReducer/setup'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,3 +13,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
