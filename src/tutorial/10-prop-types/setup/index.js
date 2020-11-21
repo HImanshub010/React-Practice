@@ -7,10 +7,16 @@ import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 const url = 'https://course-api.com/react-prop-types-example'
 
 const Index = () => {
-  const { products } = useFetch(url)
+  const { products, loading } = useFetch(url)
+  if (loading ){
+    return <>
+    <Loading/>
+    </>
+  }
   return (
     <div>
       <h2>products</h2>
+
       <section className='products'>
         {products.map((product) => {
           return <Product key={product.id} {...product} />
@@ -18,6 +24,14 @@ const Index = () => {
       </section>
     </div>
   )
+}
+
+const Loading = () => {
+  return <>
+  <div>
+    <h3>Loading ....</h3>
+  </div>
+  </>
 }
 
 export default Index
