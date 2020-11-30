@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+// when we want to use React hooks in regular function we need to make such function
+//as custom hooks by using 'use' before function name.
+//otherwise react hooks can only be used components
 
 export const useFetch = (url) => {
-   const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
 
   const getProducts = async () => {
@@ -14,5 +17,5 @@ export const useFetch = (url) => {
   useEffect(() => {
     getProducts()
   }, [url])
-  return {loading, products}
-};
+  return { loading, products }
+}
